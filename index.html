@@ -8,20 +8,24 @@
 </head>
 <body>
     <h1>Calculator</h1>
-    <label>Masukkan angka 1</label>
+    <label>Masukkan angka </label>
     <input type="text" id="input1" placeholder="0">
-    <label>Masukkan angka 2</label>
+    <label>Masukkan angka </label>
     <input type="text" id="input2" placeholder="0">
     <button onclick="tambah()" id="tambah" >+</button>
     <button onclick="kurang()" id="kurang" >-</button>
     <button onclick="pembagian()" id="pembagian" >/</button>
+    <button onclick="pengkalian()" id="pengkalian" >* </button>
+    <button onclick="modulus()" id="modulus">%</button>
+
+
 </body>
 
 <script>
     function tambah(){
         var input1 = document.getElementById("input1").value;
         var input2 = document.getElementById("input2").value;
-        var hasil = parseInt(input1) + parseInt(input2);
+        var hasil = parseInt(input1) + parseInt(input2); 
         alert(hasil);
     }
 
@@ -37,5 +41,22 @@
         var hasil = parseInt(input1) / parseInt(input2);
         alert(hasil);
     }
+
+    function pengkalian(){
+        var input1 = document.getElementById('input1').value;
+        var input2 = document.getElementById('input2').value;
+        var hasil = parseInt(input1) * parseInt(input2);
+        alert(hasil);
+
+    }
+
+    function modulus(){
+        var input1 = document.getElementById('input1').value;
+        var input2 = document.getElementById('input2').value;
+        var hasil = parseInt(input1) % parseInt(input2);
+        alert(hasil);
+    }
+
+
 </script>
 </html>
